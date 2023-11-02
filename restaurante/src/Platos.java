@@ -60,34 +60,44 @@ public class Platos {
 
     public static ArrayList<Platos> getListP(){
 
-        Platos sancochoG = new Platos("SANCOCHO DE GALLINA","Sopa colombiana abundante hecha con gallina, yuca,\n plátano, maíz y otros ingredientes.", 
+        Platos sancochoG = new Platos("SANCOCHO DE GALLINA","Sopa hecha con gallina, yuca, plátano, maíz y otros ingredientes.", 
         TipoP.ENTRADA, 8000, (byte)30); 
         listP.add(sancochoG);
 
-        Platos arepas = new Platos("AREPAS RELLENAS","Panqueques de maíz que se rellenan con una variedad de ingredientes,\n como queso, chicharrón, carne desmechada o guacamole.", 
+        Platos arepas = new Platos("AREPAS RELLENAS","Panqueques de maíz rellenos de queso, chicharrón, carne desmechada o guacamole.", 
         TipoP.ENTRADA, 2000, (byte)15);
         listP.add(arepas);
 
-        Platos lulada = new Platos("LULADA", "Bebida refrescante originaria de la región de Valle del Cauca en Colombia.\n Se prepara con lulo (una fruta cítrica),azúcar y agua, y se sirve con hielo. Es agridulce y muy refrescante.", 
+        Platos lulada = new Platos("LULADA", "Bebida refrescante, se prepara con lulo, azúcar, agua y hielo. Es agridulce y refrescante.", 
         TipoP.BEBIDA, 2000, (byte)10);
         listP.add(lulada);
 
-        Platos bandejaPaisa = new Platos("BANDEJA PAISA", "Plato colombiano típico de la región de Antioquia. Incluye carne molida, chicharrón,\n arroz, frijoles,huevo frito, plátano maduro y aguacate. Es un plato abundante y delicioso.", 
+        Platos bandejaPaisa = new Platos("BANDEJA PAISA", "Incluye carne molida, chicharrón, arroz, frijoles, huevo frito, plátano maduro y aguacate.", 
         TipoP.PLATOFUERTE, 12000, (byte)30);
         listP.add(bandejaPaisa);
 
-        Platos gaseosaCol = new Platos("GASEOSA COLOMBIANA", "Bebida gaseosa de sabor a cola muy popular en Colombia.\n Es dulce y refrescante, similar a otras colas carbonatadas.", 
+        Platos gaseosaCol = new Platos("GASEOSA COLOMBIANA", "Bebida gaseosa dulce y refrescante.", 
         TipoP.BEBIDA, 1000, (byte)5);
         listP.add(gaseosaCol);
 
-        System.out.println(listP.toString());
+        Platos sobrebarriga = new Platos("SOBREBARRIGA EN SALSA", "Plato de carne, cocinado en salsa de tomate, cebolla y especias. Se sirve con arroz y papa.", 
+        TipoP.PLATOFUERTE, 10000, (byte)15);
+        listP.add(sobrebarriga);
+
+        Platos jugoMaracuya = new Platos("JUGO DE MARACUYÁ", "Bebida refrescante y deliciosa elaborada a partir de la pulpa del maracuyá.", 
+        TipoP.BEBIDA, 6000, (byte)10);
+        listP.add(jugoMaracuya);
+
+        Platos empanadas = new Platos("EMPANADAS COLOMBIANAS", "Pequeñas empanadas fritas rellenas de carne molida, papa y especias.", 
+        TipoP.ENTRADA, 1000, (byte)15);
+        listP.add(empanadas);
 
         return listP;
     }
 
     @Override
     public String toString() {
-        return "\nNOMBRE: " + nombre + "\nDESCRIPCION: " + descripcion + "\nTIPO DE PLATO: " + tipo + "\nCOSTO: $ " + costo
-                + "\nTIEMPO DE PREPARACION: " + tiempo + " min\n";
+        return "\nNOMBRE: " + nombre + "\nDESCRIPCIÓN: " + descripcion + "\nTIPO DE PLATO: " + tipo + "\nCOSTO: $ " + costo
+                + "\nTIEMPO DE PREPARACIÓN: " + tiempo + " min\n";
     }
 }
